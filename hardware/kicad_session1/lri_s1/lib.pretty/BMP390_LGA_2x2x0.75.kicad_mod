@@ -1,0 +1,302 @@
+(footprint "BMP390_LGA_2x2x0.75"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Digital pressure sensor")
+	(tags "Barometer")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "1625be69-29f5-4026-881a-ac2786a26d2a")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "BMP390"
+		(at 0 2.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "99c30e11-9ea4-46e5-b219-087da9ac02b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.mouser.com/datasheet/3/1046/1/bst_bmp390_ds002.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a348481-45ef-4c04-841e-37c66ee9d2f8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Digital pressure sensor"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ff8310e0-429a-48d3-b3d2-614bfdf3601f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mounting Instruction" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/handling_soldering_mounting_instructions/bst-bmp380-hs000.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b260e67d-6c2e-4a6a-84df-3415e2940daf")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Manufacturer" "Bosch Sensortec"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "301d98ab-2a9d-4d1c-8612-f27def01fba3")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "MPN" "BMP390"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c4b592c8-088f-42f4-a4a5-c2fd16d8cfe5")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1 -1)
+		(end -1 -0.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a7f724bf-3e98-4b02-ba3c-16d6524d60b2")
+	)
+	(fp_line
+		(start -1 0.75)
+		(end -1 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "107ada4b-71b2-4fac-822d-a925e5344fca")
+	)
+	(fp_line
+		(start -1 1)
+		(end -0.75 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "63d47481-270d-4df3-a200-0e8b0eba3ddc")
+	)
+	(fp_line
+		(start -0.75 -1)
+		(end -1 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "2d418bfd-079a-482e-9ec7-2babf1b0345c")
+	)
+	(fp_line
+		(start 0.75 -1)
+		(end 1 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0ded2158-6513-4cf9-91dd-649ab491c55b")
+	)
+	(fp_line
+		(start 1 -1)
+		(end 1 -0.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "81688631-4b45-4a81-9540-6ca90ac0b22a")
+	)
+	(fp_line
+		(start 1 0.75)
+		(end 1 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1e4453b6-a475-4634-a001-5a301613bbc5")
+	)
+	(fp_line
+		(start 1 1)
+		(end 0.75 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "50cc843e-c964-49cc-8a4a-931691e5fcff")
+	)
+	(fp_circle
+		(center -1.25 -0.75)
+		(end -1.2 -0.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "0f324c60-e26c-4acf-8f3a-482f38c6b55f")
+	)
+	(fp_rect
+		(start -1.1 -1.1)
+		(end 1.1 1.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "acd6cbcb-69bd-497b-8d62-8bd9186ec96f")
+	)
+	(fp_rect
+		(start -1 -1)
+		(end 1 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "97bb077e-bdf9-406e-9313-38179216e448")
+	)
+	(fp_circle
+		(center -0.75 -0.75)
+		(end -0.7 -0.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8cb7292e-64f4-44f3-b6f1-f11f4205eca9")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.75 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9a40a94e-df23-4a75-a91d-9c3256511672")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.25 -0.7625)
+		(size 0.25 0.275)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "08533d23-4857-4abf-b829-d3a01296c13f")
+	)
+	(pad "2" smd rect
+		(at 0.25 -0.7625)
+		(size 0.25 0.275)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "4568caee-237c-4dff-b76c-9d17eb5cac4f")
+	)
+	(pad "3" smd rect
+		(at 0.7625 -0.5)
+		(size 0.275 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "ab7f4f55-ea3e-48cf-be2d-58c67b221d4d")
+	)
+	(pad "4" smd rect
+		(at 0.7625 0)
+		(size 0.275 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "859c6981-1362-4436-9e05-73254a07861a")
+	)
+	(pad "5" smd rect
+		(at 0.7625 0.5)
+		(size 0.275 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "684c1966-98ed-4558-b0d3-b5c5574a016b")
+	)
+	(pad "6" smd rect
+		(at 0.25 0.7625)
+		(size 0.25 0.275)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "5c63b7fb-c963-4c59-a523-3019288c2e10")
+	)
+	(pad "7" smd rect
+		(at -0.25 0.7625)
+		(size 0.25 0.275)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "0b613618-fddf-47bd-969d-ff0e59a95a22")
+	)
+	(pad "8" smd rect
+		(at -0.7625 0.5)
+		(size 0.275 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "d94cf0e3-1e0f-400f-aed1-c03efef45120")
+	)
+	(pad "9" smd rect
+		(at -0.7625 0)
+		(size 0.275 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "5eefd771-767b-4c64-90e6-dbc577bf6c52")
+	)
+	(pad "10" smd rect
+		(at -0.7625 -0.5)
+		(size 0.275 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "4f524d94-df9e-4d5b-a69d-d8c8dd02f5ff")
+	)
+	(embedded_fonts no)
+)

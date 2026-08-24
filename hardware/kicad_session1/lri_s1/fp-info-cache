@@ -1,4 +1,4 @@
-26729494345854821
+26731285640352568
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -106400,9 +106400,16 @@ Varistor VF
 2
 2
 lib
-MJTP1230
-MJTP1230-1
-Switch
+BMP390_LGA_2x2x0.75
+Digital pressure sensor
+Barometer
 0
-4
-4
+10
+10
+lib
+ICM-42688_LGA_0.91x2.50x3.00
+High Precision 6-Axis MEMS MotionTrackingTM Device
+IMU, Gyroscope
+0
+14
+14

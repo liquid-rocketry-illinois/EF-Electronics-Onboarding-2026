@@ -24,8 +24,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 0 0 0)
+		(property "Footprint" "lib:BMP390_LGA_2x2x0.75"
+			(at 0 -36.576 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -297,8 +297,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 0 0 0)
+		(property "Footprint" "lib:ICM-42688_LGA_0.91x2.50x3.00"
+			(at 0.254 -46.482 0)
 			(effects
 				(font
 					(size 1.27 1.27)
