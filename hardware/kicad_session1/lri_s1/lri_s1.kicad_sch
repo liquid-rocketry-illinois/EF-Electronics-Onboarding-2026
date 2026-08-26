@@ -4893,7 +4893,7 @@
 		)
 		(uuid "7ced343a-f3cc-4e21-8822-b5cfec3c7691")
 	)
-	(text "ACCELEROMETER + GYROSCOPE"
+	(text "INERTIAL MEASUREMENT UNIT"
 		(exclude_from_sim no)
 		(at 177.8 154.686 0)
 		(effects
@@ -10755,7 +10755,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Card:microSD_HC_Wuerth_693072010801"
+		(property "Footprint" "Connector_Card:microSD_HC_Molex_47219-2001"
 			(at 148.59 151.13 0)
 			(effects
 				(font
