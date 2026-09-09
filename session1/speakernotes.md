@@ -2,6 +2,8 @@
 
 [Slides](https://docs.google.com/presentation/d/1FYvPtxzgp9Z8kreNQ4ZyVJ6RvzKiU2WYXGnqfnrndk0/edit?usp=sharing)
 
+[Workshop Recording](https://youtu.be/0P-nO1aQ5uo)
+
 ## Slide 1
 
 - yayyyy onboarding
