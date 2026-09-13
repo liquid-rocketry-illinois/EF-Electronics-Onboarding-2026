@@ -94,6 +94,10 @@
 - Ex: I am giving a lecture to you all. I dont want to sit here waiting for a question. When you raise your hand, you
   are raising an interrupt so I stop what Im doing, answer your question, then continue where I left off. If I do stop
   and ask for questions, that is an example of "polling"
+- How does the CPU know what function to call when an interrupt occurs? IVT in startup_stm32h753xx.s
+    - Each entry in the table is an interrupt defined by the ARM architecture, and we give each position the name of the
+      function to call
+    - Lots of other neat stuff in the startup assembly, as later if interested
 
 ## Slide 12
 
@@ -110,4 +114,60 @@
 ## Slide 14
 
 - We have all these random events that can occur, and we want the cpu to stop and deal with the events as they come
-- What can we use for that?
+- When an event happens, we need to create a specific waveform with the clock, and have some decently-precise timing
+  requirements
+- For this we can use a counter
+- Describe counter: count register, incremented per clock pulse, automatically reloads after some count, can compare
+  with the count value to trigger other events
+
+## Slide 15
+
+- Datasheet time! Have everyone look through section 38, subsection 4 to see how the timer works and what registers
+  might be useful. (~5ish minutes?)
+- Hints on the slide!
+
+## Slide 16
+
+- Mostly complete list of registers we need
+
+## Slide 17
+
+- Coding time!
+- Set up cubemx things:
+    - PB15 set to GPIO_EXT15
+    - Pin lock PC6
+    - ENABLE NVIC FOR EXTI!!
+- Copy in the constants for port and pins, timer to use, etc.
+- Talk about how we are actually going to use the interrupts to track the data
+    - DIN interrupt fires when the DIN line goes H2L, indicating there is data ready. This interrupt will then set up
+      the variables to store the data, and kick off the timer
+    - The timer will automatically be generating the pulses for us
+    - The CC interrupt will trigger at half-pulse, at which point we read in one bit of data and set it at the
+      appropriate position. We only want to read 24 bits, since the 25th is just to select the next conversion type and
+      is not actual data.
+    - The UPDATE interrupt is called once the 25 pulses have completed. At this point, we can clean up the timer,
+      finalize the reading, and set up the DIN interrupt to receive the next data frame
+    - Must disable DIN interrupt in the DIN interrupt, and re-enable in UPDATE so that the actual data signal doesnt
+      continuously trigger the start of the process
+    - Create state variables (inprogressreading, latestReading, mask)
+- Set up DIN irq: copy in function
+  - We have to tell the cpu we have actually handled the interrupt with 
+    __HAL_GPIO_EXTI_CLEAR_IT, otherwise once we returned from the interrupt it would get re-triggered
+  - Must disable DIN irq so its not retriggered
+  - start counter
+- Set up CC irq:
+  - Acknowledge interrupt
+  - Read in bit
+- Set up UPDATE irq:
+  - Acknowledge interrupt
+  - finalize reading
+  - Re-enable DIN
+- Modify IVT to point to correct functions:
+  - 188
+  - 192
+  - 194
+- Copy in setup function:
+  - Have to first configure PC6 to be alternate function
+  - setup various timer registers
+  - Enable the interrupts both in timer->DIER and in NVIC
+  - 

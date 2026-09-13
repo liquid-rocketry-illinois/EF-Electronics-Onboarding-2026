@@ -63,6 +63,7 @@ void Error_Handler(void);
 #define LED_GPIO_Port GPIOB
 #define CELL_DIN_Pin GPIO_PIN_15
 #define CELL_DIN_GPIO_Port GPIOB
+#define CELL_DIN_EXTI_IRQn EXTI15_10_IRQn
 #define LED2_Pin GPIO_PIN_1
 #define LED2_GPIO_Port GPIOE
 
