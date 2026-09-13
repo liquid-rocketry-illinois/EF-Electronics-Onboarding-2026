@@ -1,6 +1,6 @@
 # Session 2 Speaker Notes
 
-[Slides](https://example.com)
+[Slides]([https://example.com](https://docs.google.com/presentation/d/1QSbIQ8ZsvT15QcZd6lBcqJOw_FmQIInytP8Eg_i__rY/edit?usp=sharing))
 [Video](https://example.com)
 
 ## Slide 1
@@ -83,7 +83,7 @@
     - Convert the raw value from the chip into a float with some bit trickery and math given by datasheet
 - To use, just call our setup and read functions
 - Output the value over uart
-- demo i2c transaction with logic 2?
+- demo i2c transaction with SALEAE
 
 ## Slide 11
 
@@ -151,23 +151,59 @@
       continuously trigger the start of the process
     - Create state variables (inprogressreading, latestReading, mask)
 - Set up DIN irq: copy in function
-  - We have to tell the cpu we have actually handled the interrupt with 
-    __HAL_GPIO_EXTI_CLEAR_IT, otherwise once we returned from the interrupt it would get re-triggered
-  - Must disable DIN irq so its not retriggered
-  - start counter
+    - We have to tell the cpu we have actually handled the interrupt with
+      __HAL_GPIO_EXTI_CLEAR_IT, otherwise once we returned from the interrupt it would get re-triggered
+    - Must disable DIN irq so its not retriggered
+    - start counter
 - Set up CC irq:
-  - Acknowledge interrupt
-  - Read in bit
+    - Acknowledge interrupt
+    - Read in bit
 - Set up UPDATE irq:
-  - Acknowledge interrupt
-  - finalize reading
-  - Re-enable DIN
+    - Acknowledge interrupt
+    - finalize reading
+    - Re-enable DIN
 - Modify IVT to point to correct functions:
-  - 188
-  - 192
-  - 194
+    - 188
+    - 192
+    - 194
 - Copy in setup function:
-  - Have to first configure PC6 to be alternate function
-  - setup various timer registers
-  - Enable the interrupts both in timer->DIER and in NVIC
-  - 
+    - Have to first configure PC6 to be alternate function
+    - setup various timer registers
+    - Enable the interrupts both in timer->DIER and in NVIC
+- Show process with SALEAE
+
+## Slide 18
+
+- We only cover these if we have time
+
+## Slide 19
+
+- DMA!!!
+- We want to be able to asynchronously read data from peripherals without having to sit there and wait for transfers
+- DMA handles that for us
+
+## Slide 20
+
+- We have a few different DMA types, and the bus diagram shows us what each DMA is connected to and can access
+- IMPORTANTLY: DMA cant access the TCMs of the CPU. Need to make sure DMA location is somewhere in SRAM so that the DMA
+  can actually access it
+- We will talk more about DMA in engine, since that is the current area of optimization
+
+## Slide 21
+
+- Freertos!
+- Threading!
+- Timers!
+- Yay!
+- Its been a long day im tired of typing my speakernotes :(
+
+## Engine Projects
+
+- FreeRTOS integration, Ethernet, and threading model for RCP
+- ARM CMSIS DSP signal processing instead of first-google-result low pass filter - actually analyze frequency response 
+  and phase shifts
+- Asynchronizing all drivers
+- Backup SRAM shenanigans
+- Networking and web app for RCI
+- Ebox wires gooder
+- Hotfire week 8?
