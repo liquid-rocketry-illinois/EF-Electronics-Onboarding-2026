@@ -1,3 +1,3 @@
 # LRI Electronics Onboarding 2026
 
-This repository is still under construction.
+Repository with onboarding code and speakernotes. Check the wiki tab at the top for instructions.
